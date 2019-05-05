@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/miaozhun"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="238dp"
+        android:src="@drawable/miaozhun"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <Button
+        android:id="@+id/Button_view"
+        android:layout_width="36dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="56dp"
+        android:text="辅助"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/auto_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="108dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewAll"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/auto_zhuaguai"
+            android:layout_width="36dp"
+            android:layout_height="47dp"
+            android:text="抓怪"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/auto_ziyuan"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/auto_ziyuan"
+            android:layout_width="36dp"
+            android:layout_height="47dp"
+            android:text="资源"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/viewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="261dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/Button_view"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <Button
+            android:id="@+id/ziyuan"
+            android:layout_width="52dp"
+            android:layout_height="39dp"
+            android:text="资源"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/ConstraintLayout_showView"
+            app:layout_constraintStart_toStartOf="@+id/ConstraintLayout_showView" />
+
+        <Button
+            android:id="@+id/monster"
+            android:layout_width="52dp"
+            android:layout_height="39dp"
+            android:text="怪物"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/ConstraintLayout_showView"
+            app:layout_constraintEnd_toEndOf="@+id/ConstraintLayout_showView" />
+
+        <Button
+            android:id="@+id/leitai"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:text="擂台"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/ziyuan"
+            app:layout_constraintEnd_toEndOf="@+id/ziyuan"
+            app:layout_constraintStart_toStartOf="@+id/ziyuan" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="52dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="12dp"
+            android:text="清空"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/leitai"
+            app:layout_constraintStart_toStartOf="@+id/ziyuan" />
+
+        <Button
+            android:id="@+id/auto"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:text="自动"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/monster"
+            app:layout_constraintEnd_toEndOf="@+id/monster"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/monster" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ConstraintLayout_showView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <ImageView
+                android:id="@+id/ImageView_right"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/layout_click_backgroud_color"
+                android:scaleType="fitCenter"
+                android:src="@drawable/right"
+                app:layout_constraintBottom_toBottomOf="@+id/move_speed"
+                app:layout_constraintStart_toEndOf="@+id/ImageView_down"
+                app:layout_constraintTop_toTopOf="@+id/move_speed" />
+
+            <TextView
+                android:id="@+id/move_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/layout_click_backgroud_color"
+                android:text="X50"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ImageView_down"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/layout_click_backgroud_color"
+                android:scaleType="fitCenter"
+                android:src="@drawable/down"
+                app:layout_constraintEnd_toEndOf="@+id/move_speed"
+                app:layout_constraintStart_toStartOf="@+id/move_speed"
+                app:layout_constraintTop_toBottomOf="@+id/ImageView_left" />
+
+            <ImageView
+                android:id="@+id/ImageView_left"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/layout_click_backgroud_color"
+                android:scaleType="fitCenter"
+                android:src="@drawable/left"
+                app:layout_constraintBottom_toBottomOf="@+id/move_speed"
+                app:layout_constraintEnd_toStartOf="@+id/ImageView_up"
+                app:layout_constraintTop_toTopOf="@+id/move_speed" />
+
+            <ImageView
+                android:id="@+id/ImageView_up"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/layout_click_backgroud_color"
+                android:scaleType="fitCenter"
+                android:src="@drawable/up"
+                app:layout_constraintBottom_toTopOf="@+id/ImageView_left"
+                app:layout_constraintEnd_toEndOf="@+id/move_speed"
+                app:layout_constraintStart_toStartOf="@+id/move_speed" />
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/layout_click_backgroud_color"
+                android:src="@drawable/add_green"
+                app:layout_constraintBottom_toTopOf="@+id/ImageView_left"
+                app:layout_constraintEnd_toStartOf="@+id/ImageView_up"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ImageView_up" />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/layout_click_backgroud_color"
+                android:src="@drawable/hd_no"
+                app:layout_constraintBottom_toTopOf="@+id/ImageView_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ImageView_up"
+                app:layout_constraintTop_toTopOf="@+id/ImageView_up" />
+
+            <ImageView
+                android:id="@+id/after_one"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/layout_click_backgroud_color"
+                android:src="@drawable/more_down"
+                app:layout_constraintBottom_toBottomOf="@+id/ImageView_down"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ImageView_up" />
+
+            <ImageView
+                android:id="@+id/next_one"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/layout_click_backgroud_color"
+                android:src="@drawable/more_up"
+                app:layout_constraintBottom_toBottomOf="@+id/ImageView_down"
+                app:layout_constraintEnd_toStartOf="@+id/ImageView_down"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ImageView_left" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

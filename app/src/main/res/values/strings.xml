@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LocalSetting</string>
+    <string name="str">类型</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="compare_number_array">　　
+        <item>资源</item>
+        <item>召唤兽</item>
+    </string-array>
+</resources>
